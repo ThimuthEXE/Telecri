@@ -52,6 +52,15 @@ body{
 
 .thi{
     color: #3caea3;
+    animation-name: blinker;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes blinker{
+    0%{opacity: 1;}
+    50%{opacity: 0.2;}
+    100%{opacity: 1;}
 }
 
 .name{
@@ -72,6 +81,10 @@ body{
 .img{
     width: 70%;
     border-color: rgb(41, 41, 41);
+    color: #3caea3;
+    box-shadow: 20px 20px 10px -10px;
+    transform: translatey(-.35em) scale(1.02);
+    border-radius: 10px;
 }
 
 .nav {
@@ -88,6 +101,34 @@ body{
     height: auto;
     padding-left: 3rem;
 }
+
+.nav div.la1 {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    border: 0ch;
+    
+    
+}
+
+.nav div.la2 {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    border: 0ch;
+    animation-name: la;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes la{
+    0%{left: 70px; top: 20px;}
+    50%{left: 55px; top: 35px;}
+    70%{left: 55px; top: 35px;}
+    100%{left: 70px; top: 20px;}
+}
+
 
 .nav div.logo a {
     text-decoration: none;
